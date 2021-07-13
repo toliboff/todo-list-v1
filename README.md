@@ -1,6 +1,6 @@
 # To-do list
 
-> This is a project that displays a list of books and allows you to add and remove books from that list.
+> This is a project that displays a list of things that one wants to get done or that need to get done.
 # Screenshot
 ![screenshot](screenshot.png)
 # Built With
