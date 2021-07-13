@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\r\\n  color: rgb(107, 97, 248);\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list-v1/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body {\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n  box-sizing: border-box;\\r\\n  font-family: Arial, Helvetica, sans-serif;\\r\\n  min-height: 100vh;\\r\\n  display: flex;\\r\\n  background-color: #fff;\\r\\n}\\r\\n\\r\\nul {\\r\\n  list-style: none;\\r\\n  margin: 0;\\r\\n  padding: 0;\\r\\n}\\r\\n\\r\\nbutton {\\r\\n  border: none;\\r\\n  outline: none;\\r\\n  background-color: transparent;\\r\\n  cursor: pointer;\\r\\n}\\r\\n\\r\\n.app {\\r\\n  border: 1px solid #ccc;\\r\\n  width: 35%;\\r\\n  margin: auto;\\r\\n}\\r\\n\\r\\n.flex-row {\\r\\n  display: flex;\\r\\n  flex-direction: row;\\r\\n  align-items: center;\\r\\n  justify-content: space-between;\\r\\n}\\r\\n\\r\\n.header {\\r\\n  padding: 10px 15px;\\r\\n  border-bottom: 1px solid #ccc;\\r\\n  background-color: rgb(248, 248, 248);\\r\\n}\\r\\n\\r\\nh1 {\\r\\n  font-size: 1rem;\\r\\n  font-weight: normal;\\r\\n}\\r\\n\\r\\ni {\\r\\n  color: rgb(168, 166, 166);\\r\\n  font-weight: 300;\\r\\n  font-size: 0.7rem;\\r\\n}\\r\\n\\r\\n.fa-level-down-alt {\\r\\n  transform: rotate(90deg);\\r\\n}\\r\\n\\r\\n.form {\\r\\n  border-bottom: 1px solid #ccc;\\r\\n  padding: 0 5px;\\r\\n}\\r\\n\\r\\n::placeholder {\\r\\n  color: #b3bac5;\\r\\n  font-style: italic;\\r\\n}\\r\\n\\r\\n.input {\\r\\n  flex-grow: 1;\\r\\n  margin-right: 5px;\\r\\n  height: 30px;\\r\\n  border: none;\\r\\n  outline: none;\\r\\n  padding: 10px 15px;\\r\\n  font-size: 1rem;\\r\\n  font-style: italic;\\r\\n  color: #999;\\r\\n}\\r\\n\\r\\n.todo {\\r\\n  padding: 10px 0 10px 15px;\\r\\n  border-bottom: 1px solid #ccc;\\r\\n}\\r\\n\\r\\n.todo-text {\\r\\n  border: none;\\r\\n  outline: none;\\r\\n  flex-grow: 1;\\r\\n  font-size: 1rem;\\r\\n  background-color: transparent;\\r\\n}\\r\\n\\r\\n.todo-text:focus {\\r\\n  text-decoration: none;\\r\\n  color: #000;\\r\\n}\\r\\n\\r\\n.checkbox {\\r\\n  margin-right: 10px;\\r\\n}\\r\\n\\r\\n.completed {\\r\\n  text-decoration: line-through;\\r\\n  color: #999;\\r\\n}\\r\\n\\r\\n.dots {\\r\\n  cursor: all-scroll;\\r\\n  height: 150%;\\r\\n  font-size: 1.1rem;\\r\\n  padding: 10px;\\r\\n}\\r\\n\\r\\n.dots:hover {\\r\\n  color: #000;\\r\\n}\\r\\n\\r\\n.footer {\\r\\n  background-color: rgb(240, 235, 235);\\r\\n  width: 100%;\\r\\n  height: 50px;\\r\\n}\\r\\n\\r\\n.clear-btn {\\r\\n  width: 50%;\\r\\n  margin: 0 auto;\\r\\n  color: rgb(116, 112, 112);\\r\\n  font-size: 1rem;\\r\\n}\\r\\n\\r\\n.clear-btn:hover {\\r\\n  color: #000;\\r\\n  text-decoration: underline;\\r\\n}\\r\\n\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list-v1/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -100,23 +100,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
 
 /***/ }),
 
-/***/ "./src/gear.png":
-/*!**********************!*\
-  !*** ./src/gear.png ***!
-  \**********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"bf62ccc8b7727463ceb0.png\";\n\n//# sourceURL=webpack://todo-list-v1/./src/gear.png?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _gear_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gear.png */ \"./src/gear.png\");\n\n\n\ndocument.body.style.background = `url(\"${_gear_png__WEBPACK_IMPORTED_MODULE_1__}\")`;\n\n//# sourceURL=webpack://todo-list-v1/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\nconst list = document.getElementById('list');\n\nconst todoList = [\n  {\n    description: 'Deploy project on GitHub pages',\n    completed: false,\n    index: 4,\n  },\n  {\n    description: 'Add README.md file',\n    completed: true,\n    index: 3,\n  },\n  {\n    description: 'Take a screenshot',\n    completed: false,\n    index: 2,\n  },\n  {\n    description: 'Install webpack',\n    completed: false,\n    index: 1,\n  },\n];\n\nfunction renderList(arr) {\n  list.innerHTML = arr.sort((a, b) => +a.index - +b.index).map((item) => `<li class=\"flex-row todo\">\n                                      <input type=\"checkbox\" class=\"checkbox\" id=\"${item.index}\"  ${item.completed ? 'checked' : ''}>\n                                      <input type=\"text\" value=\"${item.description}\" class=\"todo-text ${item.completed ? 'completed' : ''}\">\n                                      <i class=\"fas fa-ellipsis-v dots\"></i>\n                                      </li>`).join('');\n  const checkboxes = document.querySelectorAll('.checkbox');\n  checkboxes.forEach((chbox) => {\n    chbox.addEventListener('change', (event) => {\n      event.target.nextElementSibling.classList.toggle('completed');\n    });\n  });\n}\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  renderList(todoList);\n});\n\n//# sourceURL=webpack://todo-list-v1/./src/index.js?");
 
 /***/ })
 
@@ -171,18 +161,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -197,26 +175,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
