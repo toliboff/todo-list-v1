@@ -42,7 +42,6 @@ button {
 
 h1 {
   font-size: 1rem;
-  font-weight: normal;
 }
 
 i {
@@ -80,6 +79,7 @@ i {
 .todo {
   padding: 10px 0 10px 15px;
   border-bottom: 1px solid #ccc;
+  transition: 0.5s;
 }
 
 .todo-text {
