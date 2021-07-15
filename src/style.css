@@ -23,6 +23,7 @@ button {
 
 .app {
   border: 1px solid #ccc;
+  box-shadow: 0 8px 15px #ccc;
   width: 35%;
   margin: auto;
 }
@@ -131,4 +132,8 @@ i {
 .clear-btn:hover {
   color: #000;
   text-decoration: underline;
+}
+
+.current-active {
+  opacity: 0;
 }
