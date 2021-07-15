@@ -2,6 +2,7 @@ import {
   dragStart, allowDrop, dragEnd, drop, dragEnter, dragLeave,
 } from './drag.js';
 import './style.css';
+import updateStatus from './status.js';
 
 const list = document.getElementById('list');
 
@@ -72,7 +73,7 @@ function renderList(arr) {
 
   const checkboxes = document.querySelectorAll('.checkbox');
   checkboxes.forEach((chbox) => {
-    // code chbox
+    chbox.addEventListener('change', updateStatus);
   });
 }
 
