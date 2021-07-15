@@ -11,18 +11,21 @@
 
 ## Live Demo
 
-[Live Demo Link](https://toliboff.github.io/todo-list-v1/)
+[Live Demo Link](https://tolibs-todo-list-v1.netlify.app/)
 
 # Getting started
 
 ## To get a local copy of this repository kindly follow the steps below.
-- Scroll to top of this current repository
-- Click on the `Code` button with background color green on the right end corner
-- Click on the clipboard icon on the extreme right of the dropdown to copy the repository link
 - In your local PC, open your terminal or command prompt in the folder you would like to clone this repository into
-- Type `git clone (copied link)` on the currently opened terminal or command prompt
-- Remember to change `(copied link)` to `https://github.com/toliboff/todo-list-v1.git` which is the name of the repository
-
+- Make sure you have `Node NPM` installed on your computer
+- Clone or download this repo on your machine: `git clone https://github.com/todo-list-v1.git`
+- Enter project directory with command `cd todo-list-v1`
+### Install
+- Run `npm install`
+- Run `run build`
+- Run `npm star`
+### Usage
+- Open `index.html` in your browser
 # Author
 :bust_in_silhouette: Tolibjon Tolibov
 - GitHub: [@toliboff](https://https://github.com/toliboff)
