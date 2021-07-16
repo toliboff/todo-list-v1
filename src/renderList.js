@@ -1,3 +1,4 @@
+import { removeTodo } from './addClearTodo.js';
 import {
   dragStart, allowDrop, dragEnd, drop, dragEnter, dragLeave,
 } from './drag.js';
@@ -27,9 +28,14 @@ export default function renderList(arr) {
 
   document.querySelectorAll('.todo-text').forEach((text) => {
     const trash = document.querySelector(`[data-trash='${text.dataset.index}']`);
-    trash.addEventListener('click', (event) =>{
-      console.log(event.target);
-    });
+    trash.addEventListener('click', (event) => {
+      const todos = getFromStorage('TodoList');
+      todos.splice(event.target.dataset.trash, 1);
+      const modifiedIndex = todos.map((el, index) => ({...el, index}));
+      event.target.parentNode.remove();
+      saveToStorage('TodoList', modifiedIndex);
+      
+    })
 
     text.addEventListener('focus', (event) => {
         document.querySelectorAll('.todo').forEach((t) => {

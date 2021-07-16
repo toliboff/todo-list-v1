@@ -26,6 +26,7 @@ button {
   box-shadow: 0 8px 15px #ccc;
   width: 35%;
   margin: auto;
+  min-width: 350px;
 }
 
 .flex-row {
@@ -78,9 +79,9 @@ i {
 }
 
 .todo {
-  padding: 10px 0 10px 15px;
+  position: relative;
+  padding-left: 15px;
   border-bottom: 1px solid #ccc;
-  transition: 0.5s;
 }
 
 .todo-text {
@@ -89,6 +90,7 @@ i {
   flex-grow: 1;
   font-size: 1rem;
   background-color: transparent;
+  height: 50px;
 }
 
 .todo-text:focus {
@@ -136,4 +138,18 @@ i {
 
 .current-active {
   opacity: 0;
+}
+
+.deleteBtn {
+  position: absolute;
+  right: 0;
+  font-size: 1.1rem;
+  padding: 10px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #fea;
+  opacity: 1;
 }
