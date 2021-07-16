@@ -23,7 +23,7 @@
 ### Install
 - Run `npm install`
 - Run `run build`
-- Run `npm star`
+- Run `npm start`
 ### Usage
 - Open `index.html` in your browser
 # Author
@@ -42,7 +42,7 @@ Give a :star: if you like this project!
 
 
 
-* [Original design idea](https://web.archive.org/web/20180320194056/http://www.getminimalist.com:80/)
+* [Original design and idea](https://web.archive.org/web/20180320194056/http://www.getminimalist.com:80/)
 * [Webpack](https://webpack.js.org/)
 * [GitHub](https://www.github.com)
 * [FontAwesome Icons](https://fontawesome.com)
