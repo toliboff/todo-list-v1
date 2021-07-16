@@ -11,6 +11,16 @@ export function addTodo(event) {
   renderList(todos);
 }
 
+export function removeTodo(event) {
+  if (event.target.dataset.type === 'deleteBtn') {
+    const todos = getFromStorage('TodoList');
+    todos.splice(event.target.parentNode.id, 1);
+    const modifiedIndex = todos.map((el, index) => ({ ...el, index }));
+    saveToStorage('TodoList', modifiedIndex);
+    renderList(modifiedIndex);
+  }
+}
+
 export function clearCompleted() {
   const todos = getFromStorage('TodoList');
   renderList(todos.filter((todo) => !todo.completed));

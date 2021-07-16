@@ -82,6 +82,7 @@ i {
   position: relative;
   padding-left: 15px;
   border-bottom: 1px solid #ccc;
+  overflow: hidden;
 }
 
 .todo-text {
@@ -141,8 +142,9 @@ i {
 }
 
 .deleteBtn {
+  z-index: -1;
   position: absolute;
-  right: 0;
+  right: -5px;
   font-size: 1.1rem;
   padding: 10px;
   opacity: 0;
@@ -150,6 +152,6 @@ i {
 }
 
 .active {
-  background-color: #fea;
   opacity: 1;
+  z-index: 2;
 }
