@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://tolibs-todo-list-v1.netlify.app/)
+[Live Demo Link](https://toliboff.github.io/todo-list-v1/)
 
 # Getting started
 
