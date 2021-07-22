@@ -2,8 +2,6 @@
  * @jest-environment jsdom
  */
 import { addTodo, removeTodo } from './crud.js';
-import {saveToStorage, getFromStorage} from './storage.js';
-import renderList from './renderList.js';
 
 jest.mock('./storage.js');
 jest.mock('./crud.js');
@@ -41,15 +39,17 @@ describe('Testing addTodo function', () => {
     addtBtn.click();
     input.value = 'Third todo';
     addtBtn.click();
-    expect(list.children.length).toBe(3);
+    input.value = 'Fourth todo';
+    addtBtn.click();
+    expect(list.children.length).toBe(4);
   });
 
-  test('Check quantity of list items after deleting. Should return 1', () => {
+  test('Check quantity of list items after deleting. Should return 3', () => {
     const deleteIcon = document.querySelector('i[data-trash="0"]');
     deleteIcon.addEventListener('click', (event) => {
       removeTodo(event);
     });
     deleteIcon.click();
-    expect(list.children.length).toBe(2);
+    expect(list.children.length).toBe(3);
   });
 });

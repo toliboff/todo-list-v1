@@ -23,8 +23,10 @@
 ### Install
 - Run `npm install`
 - Run `run build`
-- Run `npm start`
+### Testing
+- Run `npm test`
 ### Usage
+- Run `npm start`
 - Open `index.html` in your browser
 # Author
 :bust_in_silhouette: Tolibjon Tolibov
@@ -44,6 +46,7 @@ Give a :star: if you like this project!
 
 * [Original design and idea](https://web.archive.org/web/20180320194056/http://www.getminimalist.com:80/)
 * [Webpack](https://webpack.js.org/)
+* [Jest](https://jestjs.io/)
 * [GitHub](https://www.github.com)
 * [FontAwesome Icons](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
