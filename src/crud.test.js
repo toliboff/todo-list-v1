@@ -1,8 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-import { addTodo, removeTodo } from './crud.js';
-import updateStatus, { updateTodo } from './status.js';
+import { addTodo, removeTodo, clearCompleted } from './crud.js';
+import { updateStatus, updateTodo } from './status.js';
 
 jest.mock('./storage.js');
 jest.mock('./crud.js');
@@ -14,6 +14,9 @@ document.body.innerHTML = `
         <button type='submit' id="submit"><i class="fas fa-level-down-alt"></i></button> 
       </form>
       <ul id="list"></ul>
+      <footer class="footer flex-row">
+        <button class="clear-btn" type="button" id="clear-btn">Clear all completed</button>
+      </footer>
     `;
 const form = document.getElementById('form');
 const input = document.getElementById('input');
@@ -78,16 +81,17 @@ describe('Testing addTodo function', () => {
     inputEl.dispatchEvent(inputEvent);
     expect(inputEl.value).toBe('Updated text');
   });
-});
 
-// describe('Testing editing and updating "completed" status functions', () => {
-//   test('Check status of list item after updating', () => {
-//     const checkbox = document.querySelector('input[data-id="0"]');
-//     console.log(checkbox);
-//         // deleteIcon.addEventListener('click', (event) => {
-//         //   removeTodo(event);
-//         // });
-//         // deleteIcon.click();
-//         // expect(list.children.length).toBe(3);
-//   });
-// });
+  test('Check quantity of completed tasks. Should return 3', () => {
+    const check1 = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+    expect(check1.length).toBe(3);
+  });
+
+  test('Clear all completed tasks. Only one task is completed. Should return 2', () => {
+    const clearBtn = document.getElementById('clear-btn');
+    clearBtn.addEventListener('click', clearCompleted);
+    clearBtn.click();
+    const check2 = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+    expect(check2.length).toBe(2);
+  });
+});

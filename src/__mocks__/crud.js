@@ -22,6 +22,10 @@ export function removeTodo(event) {
 }
 
 export function clearCompleted() {
+  // console.log('Function call');
   const todos = getFromStorage('TodoList');
-  renderList(todos.filter((todo) => !todo.completed));
+  // console.log(todos);
+  const clearedList = todos.filter((todo) => !todo.completed)
+  saveToStorage('TodoList', clearedList);
+  renderList(clearedList);
 }
