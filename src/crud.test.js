@@ -2,23 +2,25 @@
  * @jest-environment jsdom
  */
 import { addTodo, removeTodo } from './crud.js';
+import updateStatus from './status.js';
 
 jest.mock('./storage.js');
 jest.mock('./crud.js');
+jest.mock('./status.js');
 
-describe('Testing addTodo function', () => {
-  document.body.innerHTML = `
+document.body.innerHTML = `
     <form class="form flex-row" id="form">
         <input type="text" id="input" placeholder="Add to your list..." autocomplete="off" class="input">
         <button type='submit' id="submit"><i class="fas fa-level-down-alt"></i></button> 
       </form>
       <ul id="list"></ul>
     `;
-  const form = document.getElementById('form');
-  const input = document.getElementById('input');
-  const list = document.getElementById('list');
-  const addtBtn = document.getElementById('submit');
+const form = document.getElementById('form');
+const input = document.getElementById('input');
+const list = document.getElementById('list');
+const addtBtn = document.getElementById('submit');
 
+describe('Testing addTodo function', () => {
   test('Check dynamically created list item', () => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -52,4 +54,30 @@ describe('Testing addTodo function', () => {
     deleteIcon.click();
     expect(list.children.length).toBe(3);
   });
+
+  test('Check status of list item', () => {
+    const checkbox = document.querySelector('input[data-id="0"]');
+    expect(checkbox.checked).toBeFalsy();
+  });
+
+  test('Check status of list item after updating', () => {
+    const checkbox = document.querySelector('input[data-id="0"]');
+    checkbox.addEventListener('change', (event) => {
+      updateStatus(event);
+    });
+    checkbox.click();
+    expect(checkbox.checked).toBeTruthy();
+  });
 });
+
+// describe('Testing editing and updating "completed" status functions', () => {
+//   test('Check status of list item after updating', () => {
+//     const checkbox = document.querySelector('input[data-id="0"]');
+//     console.log(checkbox);
+//         // deleteIcon.addEventListener('click', (event) => {
+//         //   removeTodo(event);
+//         // });
+//         // deleteIcon.click();
+//         // expect(list.children.length).toBe(3);
+//   });
+// });
