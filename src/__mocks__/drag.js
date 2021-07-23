@@ -1,5 +1,5 @@
 import renderList from '../renderList.js';
-import {saveToStorage } from './storage.js';
+import { saveToStorage } from './storage.js';
 
 export default function drop(current, targetItem) {
   current.parentElement.insertBefore(current, targetItem);
@@ -9,5 +9,5 @@ export default function drop(current, targetItem) {
   }
   ));
   saveToStorage('TodoList', updatedList);
-  renderList(updatedList)
+  renderList(updatedList);
 }
