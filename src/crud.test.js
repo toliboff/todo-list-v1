@@ -3,10 +3,12 @@
  */
 import { addTodo, removeTodo, clearCompleted } from './crud.js';
 import { updateStatus, updateTodo } from './status.js';
+import drop from './drag.js';
 
 jest.mock('./storage.js');
 jest.mock('./crud.js');
 jest.mock('./status.js');
+jest.mock('./drag.js');
 
 document.body.innerHTML = `
     <form class="form flex-row" id="form">
@@ -40,22 +42,26 @@ describe('Testing addTodo function', () => {
   });
 
   test('Check quantity of list items after adding a new one. Should return 2', () => {
-    input.value = 'Second todo';
+    input.value = 'BBB';
     addtBtn.click();
-    input.value = 'Third todo';
+    input.value = 'CCC';
     addtBtn.click();
-    input.value = 'Fourth todo';
+    input.value = 'DDD';
     addtBtn.click();
-    expect(list.children.length).toBe(4);
+    input.value = 'EEE';
+    addtBtn.click();
+    input.value = 'FFF';
+    addtBtn.click();
+    expect(list.children.length).toBe(6);
   });
 
-  test('Check quantity of list items after deleting. Should return 3', () => {
+  test('Check quantity of list items after deleting. Should return 5', () => {
     const deleteIcon = document.querySelector('i[data-trash="0"]');
     deleteIcon.addEventListener('click', (event) => {
       removeTodo(event);
     });
     deleteIcon.click();
-    expect(list.children.length).toBe(3);
+    expect(list.children.length).toBe(5);
   });
 
   test('Check status of list item', () => {
@@ -82,16 +88,35 @@ describe('Testing addTodo function', () => {
     expect(inputEl.value).toBe('Updated text');
   });
 
-  test('Check quantity of completed tasks. Should return 3', () => {
+  test('Check quantity of completed tasks. Should return 5', () => {
     const check1 = Array.from(document.querySelectorAll('input[type="checkbox"]'));
-    expect(check1.length).toBe(3);
+    expect(check1.length).toBe(5);
   });
 
-  test('Clear all completed tasks. Only one task is completed. Should return 2', () => {
+  test('Clear all completed tasks. Only one task is completed. Should return 4', () => {
     const clearBtn = document.getElementById('clear-btn');
     clearBtn.addEventListener('click', clearCompleted);
     clearBtn.click();
     const check2 = Array.from(document.querySelectorAll('input[type="checkbox"]'));
-    expect(check2.length).toBe(2);
+    expect(check2.length).toBe(4);
+  });
+
+  test('Check third todo\'s index and description. Should return EEE/3', () => {
+    const tasks = Array.from(document.querySelectorAll('li'));
+    const thirdTodo = tasks[2];
+    const expectedValue = `${thirdTodo.children[1].value}/${thirdTodo.children[1].dataset.index}`;
+    expect(expectedValue).toBe('EEE/3');
+  });
+
+  test('Check third todo\'s after drag and drop. Should return EEE/0', () => {
+    let tasks = Array.from(document.querySelectorAll('li'));
+    const thirdTodo = tasks[2];
+    let firstTodo = tasks[0];
+
+    drop(thirdTodo, firstTodo);
+    tasks = Array.from(document.querySelectorAll('li'));
+    [firstTodo] = tasks;
+    const expectedValue = `${firstTodo.children[1].value}/${firstTodo.children[1].dataset.index}`;
+    expect(expectedValue).toBe('EEE/0');
   });
 });
