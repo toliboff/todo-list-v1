@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { addTodo, removeTodo } from './crud.js';
-import updateStatus from './status.js';
+import updateStatus, { updateTodo } from './status.js';
 
 jest.mock('./storage.js');
 jest.mock('./crud.js');
@@ -67,6 +67,16 @@ describe('Testing addTodo function', () => {
     });
     checkbox.click();
     expect(checkbox.checked).toBeTruthy();
+  });
+
+  test('Editing the task. Should return "Updated text"', () => {
+    const inputEl = document.querySelector('input[data-index="0"]');
+    inputEl.addEventListener('input', updateTodo);
+
+    const inputEvent = new Event('input');
+    inputEl.value = 'Updated text';
+    inputEl.dispatchEvent(inputEvent);
+    expect(inputEl.value).toBe('Updated text');
   });
 });
 

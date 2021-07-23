@@ -1,7 +1,7 @@
 import {
   dragStart, allowDrop, dragEnd, drop, dragEnter, dragLeave,
 } from './drag.js';
-import updateStatus from './status.js';
+import { updateStatus, updateTodo } from './status.js';
 import { getFromStorage, saveToStorage } from './storage.js';
 
 export default function renderList(arr) {
@@ -42,11 +42,7 @@ export default function renderList(arr) {
       setTimeout(() => trash.classList.remove('active'), 100);
     });
 
-    text.addEventListener('input', (event) => {
-      const editable = getFromStorage('TodoList');
-      editable[event.target.dataset.index].description = event.target.value;
-      saveToStorage('TodoList', editable);
-    });
+    text.addEventListener('input', updateTodo);
   });
 
   const checkboxes = document.querySelectorAll('.checkbox');
