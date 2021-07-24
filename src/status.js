@@ -1,6 +1,9 @@
-export default function updateStatus(event) {
+export function updateStatus(event, status) {
   event.target.nextElementSibling.classList.toggle('completed');
-  const status = JSON.parse(localStorage.getItem('TodoList'));
   status[event.target.dataset.id].completed = event.target.checked;
-  localStorage.setItem('TodoList', JSON.stringify(status));
+  return status;
+}
+export function editTodo(event, editable) {
+  editable[event.target.dataset.index].description = event.target.value;
+  return editable;
 }

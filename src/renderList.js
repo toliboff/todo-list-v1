@@ -1,8 +1,6 @@
 import {
   dragStart, allowDrop, dragEnd, drop, dragEnter, dragLeave,
 } from './drag.js';
-import updateStatus from './status.js';
-import { getFromStorage, saveToStorage } from './storage.js';
 
 export default function renderList(arr) {
   const list = document.getElementById('list');
@@ -23,34 +21,5 @@ export default function renderList(arr) {
     t.addEventListener('dragleave', dragLeave);
     t.addEventListener('drop', drop);
     t.addEventListener('dragover', allowDrop);
-  });
-
-  document.querySelectorAll('.todo-text').forEach((text) => {
-    const trash = document.querySelector(`[data-trash='${text.dataset.index}']`);
-    text.addEventListener('focus', (event) => {
-      document.querySelectorAll('.todo').forEach((t) => {
-        t.style.backgroundColor = '#fff';
-      });
-      event.target.parentNode.style.backgroundColor = '#fea';
-      trash.classList.add('active');
-    });
-
-    text.addEventListener('blur', () => {
-      document.querySelectorAll('.todo').forEach((t) => {
-        t.style.backgroundColor = '#fff';
-      });
-      setTimeout(() => trash.classList.remove('active'), 100);
-    });
-
-    text.addEventListener('input', (event) => {
-      const editable = getFromStorage('TodoList');
-      editable[event.target.dataset.index].description = event.target.value;
-      saveToStorage('TodoList', editable);
-    });
-  });
-
-  const checkboxes = document.querySelectorAll('.checkbox');
-  checkboxes.forEach((chbox) => {
-    chbox.addEventListener('change', updateStatus);
   });
 }
