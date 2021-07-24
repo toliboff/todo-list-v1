@@ -1,8 +1,8 @@
 let current = null;
 let targetItem = null;
 
-export function dragStart() {
-  current = this;
+export function dragStart(event) {
+  current = event.target;
   current.classList.add('current-active');
 }
 
@@ -24,12 +24,12 @@ export function allowDrop(event) {
 }
 
 export function drop(event) {
-  targetItem = document.getElementById(event.target.parentNode.id);
+  targetItem = document.getElementById(event.target.id);
   current.parentElement.insertBefore(current, targetItem);
   const children = Array.from(current.parentElement.children);
   const updatedList = children.map((el, index) => ({
     index, completed: el.children[0].checked, description: el.children[1].value,
   }
   ));
-  localStorage.setItem('TodoList', JSON.stringify(updatedList));
+  return updatedList;
 }

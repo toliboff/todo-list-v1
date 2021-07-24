@@ -1,11 +1,5 @@
-import renderList from './renderList.js';
-import { getFromStorage, saveToStorage } from './storage.js';
-
 export function addTodo(newTodo, todos) {
-  // event.preventDefault();
-  // const input = event.target.children[0];
   todos.push({ index: todos.length, description: newTodo, completed: false });
-  // input.value = '';
   return todos;
 }
 

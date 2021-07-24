@@ -1,5 +1,5 @@
 const localStorage = {
-  TodoList: '[]',
+  TodoList: [],
   getItem(name) {
     return this[name];
   },
@@ -9,6 +9,6 @@ const localStorage = {
 
 };
 
-export const getFromStorage = (name) => JSON.parse(localStorage.getItem(name));
+export const getFromStorage = (name) => localStorage.getItem(name);
 
-export const saveToStorage = (name, data) => localStorage.setItem(name, JSON.stringify(data));
+export const saveToStorage = (name, data) => localStorage.setItem(name, data);
