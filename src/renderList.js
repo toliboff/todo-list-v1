@@ -1,7 +1,6 @@
 import {
   dragStart, allowDrop, dragEnd, drop, dragEnter, dragLeave,
 } from './drag.js';
-import { updateStatus, editTodo } from './status.js';
 
 export default function renderList(arr) {
   const list = document.getElementById('list');

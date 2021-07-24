@@ -4,7 +4,9 @@
 import { addTodo, removeTodo, clearCompleted } from './crud.js';
 import { updateStatus, editTodo } from './status.js';
 import { getFromStorage, saveToStorage } from './storage.js';
-import { drop, dragStart, dragEnd, dragEnter, dragLeave, allowDrop } from './drag.js';
+import {
+  drop, dragStart, dragEnd, dragEnter, dragLeave, allowDrop,
+} from './drag.js';
 import renderList from './renderList.js';
 
 jest.mock('./storage.js');
